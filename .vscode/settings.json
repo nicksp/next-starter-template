@@ -1,4 +1,5 @@
 {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   // Don’t format files on save
   "editor.formatOnSave": false,
   // Autosave files on focus change
