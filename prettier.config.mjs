@@ -3,6 +3,17 @@ const config = {
   semi: false,
   singleQuote: true,
   trailingComma: 'es5',
+  importOrder: [
+    '^(react|next?/?([a-zA-Z/]*))$',
+    '<THIRD_PARTY_MODULES>',
+    '^@/(.*)$',
+    '^types$',
+    '^@/types/(.*)$',
+    '^@/styles/(.*)$',
+    '^[./]',
+  ],
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
   overrides: [
     {
       files: '*.md',
@@ -15,6 +26,7 @@ const config = {
       },
     },
   ],
+  plugins: ['@trivago/prettier-plugin-sort-imports'],
 }
 
 export default config
