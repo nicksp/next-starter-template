@@ -10,8 +10,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "format": "prettier src/ --write",
-    "type-check": "tsc --pretty --noEmit"
+    "type-check": "tsc --pretty --noEmit",
+    "prepare": "husky"
   },
   "dependencies": {
     "next": "15.1.4",
@@ -29,11 +31,25 @@
     "eslint-config-next": "15.1.4",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-check-file": "2.8.0",
+    "husky": "9.1.7",
+    "lint-staged": "15.3.0",
     "postcss": "^8",
     "prettier": "3.4.2",
     "prettier-plugin-tailwindcss": "0.6.9",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "pnpm type-check"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "pnpm format",
+      "pnpm lint:fix"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
   },
   "browserslist": {
     "production": [
