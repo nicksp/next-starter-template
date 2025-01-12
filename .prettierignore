@@ -1,0 +1,8 @@
+node_modules
+.cache
+.next
+public
+**/**/node_modules
+**/**/.cache
+**/**/.next
+**/**/public
