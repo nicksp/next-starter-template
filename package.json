@@ -39,18 +39,6 @@
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
   },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "pnpm type-check"
-    ],
-    "*.{js,jsx,ts,tsx}": [
-      "pnpm format",
-      "pnpm lint:fix"
-    ],
-    "*.json": [
-      "prettier --write"
-    ]
-  },
   "browserslist": {
     "production": [
       "last 2 versions",
