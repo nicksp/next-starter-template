@@ -13,6 +13,8 @@ import {
   NavbarMenuToggle,
 } from '@nextui-org/react'
 
+import { ThemeSwitcher } from './theme-switcher'
+
 export default function AppNavbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
@@ -47,8 +49,14 @@ export default function AppNavbar() {
             </Link>
           </NavbarItem>
         ))}
+        <NavbarItem>
+          <ThemeSwitcher />
+        </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
+        <NavbarMenuItem>
+          <ThemeSwitcher showLabel />
+        </NavbarMenuItem>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link className="w-full" href={item.href} size="lg">
