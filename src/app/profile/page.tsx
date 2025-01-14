@@ -5,6 +5,7 @@ import options from '@/config/auth'
 
 export default async function ProfilePage() {
   const session = await getServerSession(options)
+
   return (
     <Card className="mx-auto mt-4 max-w-md">
       <CardBody>
