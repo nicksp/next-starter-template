@@ -6,6 +6,8 @@ export const env = createEnv({
     NODE_ENV: z.enum(['development', 'production']),
     GOOGLE_CLIENT_ID: z.string(),
     GOOGLE_CLIENT_SECRET: z.string(),
+    NEXTAUTH_URL: z.string().url(),
+    AUTH_SECRET: z.string(),
   },
   onValidationError: (error: ZodError) => {
     console.error(
