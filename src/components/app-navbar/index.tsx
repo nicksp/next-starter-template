@@ -12,23 +12,28 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
 } from '@nextui-org/react'
+import { useSession } from 'next-auth/react'
 
 import AuthButton from './auth-button'
 import { ThemeSwitcher } from './theme-switcher'
 
 export default function AppNavbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+  const { status } = useSession()
 
   const menuItems = [
     {
       label: 'Home',
       href: '/',
     },
-    {
+  ]
+
+  if (status === 'authenticated') {
+    menuItems.push({
       label: 'Profile',
       href: '/profile',
-    },
-  ]
+    })
+  }
 
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>

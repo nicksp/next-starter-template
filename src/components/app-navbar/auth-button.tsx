@@ -22,9 +22,11 @@ export default function AuthButton({
   }
 
   if (status === 'authenticated') {
+    const handleSignOut = () => signOut({ callbackUrl: '/' })
+
     if (minimal) {
       return (
-        <Button color="danger" variant="ghost" onPress={() => signOut()}>
+        <Button color="danger" variant="ghost" onPress={handleSignOut}>
           <IconBrandGoogle />
           Sign out
         </Button>
@@ -47,7 +49,7 @@ export default function AuthButton({
             <p className="font-semibold">Signed in as</p>
             <p className="font-semibold">{data.user?.email}</p>
           </DropdownItem>
-          <DropdownItem key="sign-out" color="danger" onPress={() => signOut()}>
+          <DropdownItem key="sign-out" color="danger" onPress={handleSignOut}>
             Sign out
           </DropdownItem>
         </DropdownMenu>
@@ -56,7 +58,15 @@ export default function AuthButton({
   }
 
   return (
-    <Button color="danger" variant="ghost" onPress={() => signIn('google')}>
+    <Button
+      color="danger"
+      variant="ghost"
+      onPress={() =>
+        signIn('google', {
+          callbackUrl: '/profile',
+        })
+      }
+    >
       <IconBrandGoogle />
       Sign in
     </Button>
