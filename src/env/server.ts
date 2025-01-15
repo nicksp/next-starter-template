@@ -8,6 +8,12 @@ export const env = createEnv({
     GOOGLE_CLIENT_SECRET: z.string(),
     NEXTAUTH_URL: z.string().url(),
     AUTH_SECRET: z.string(),
+    DB_HOST: z.string(),
+    DB_USER: z.string(),
+    DB_PASSWORD: z.string(),
+    DB_NAME: z.string(),
+    DB_PORT: z.coerce.number(),
+    DATABASE_URL: z.string().url(),
   },
   onValidationError: (error: ZodError) => {
     console.error(
