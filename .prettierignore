@@ -1,8 +1,5 @@
 node_modules
+pnpm-lock.yaml
 .cache
 .next
 public
-**/**/node_modules
-**/**/.cache
-**/**/.next
-**/**/public

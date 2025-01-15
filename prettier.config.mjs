@@ -1,4 +1,4 @@
-/** @type {import('prettier').Config} */
+/** @type {import('prettier').Config | {importOrder: string[]; importOrderSeparation: boolean; importOrderSortSpecifiers: boolean}} */
 const config = {
   semi: false,
   singleQuote: true,

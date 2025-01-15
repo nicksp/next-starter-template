@@ -18,6 +18,7 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
+  // Use the project's typescript version
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true
 }
