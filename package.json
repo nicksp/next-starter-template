@@ -13,6 +13,9 @@
     "lint:fix": "next lint --fix",
     "format": "prettier src/ --write",
     "type-check": "tsc --pretty --noEmit",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "cross-env DB_MIGRATING=true drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio",
     "prepare": "husky"
   },
   "dependencies": {
@@ -38,6 +41,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "10.4.20",
+    "cross-env": "7.0.3",
     "cssnano": "7.0.6",
     "drizzle-kit": "0.30.1",
     "eslint": "^9",
