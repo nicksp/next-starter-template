@@ -19,6 +19,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@auth/drizzle-adapter": "1.7.4",
     "@nextui-org/react": "2.6.11",
     "@t3-oss/env-nextjs": "0.11.1",
     "@tabler/icons-react": "3.28.1",
