@@ -2,8 +2,10 @@ import { Card, CardBody, User } from '@nextui-org/react'
 import { getServerSession } from 'next-auth'
 
 import options from '@/config/auth'
+import { requireAuth } from '@/utils/require-auth'
 
 export default async function ProfilePage() {
+  await requireAuth()
   const session = await getServerSession(options)
 
   return (
