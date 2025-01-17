@@ -4,7 +4,13 @@ This is a starter template for building production-grade applications using Next
 
 ## Features
 
-TBD
+- Linting / Code Style
+- Environment Variables
+- Styles / UI
+- Validation
+- Forms
+- Database
+- Authentication
 
 ## Tech Stack
 
@@ -15,7 +21,18 @@ TBD
 ```bash
 git clone https://github.com/nicksp/next-starter-template
 cd next-starter-template
+
+# Install dependencies
 pnpm install
+
+# Create the .env file
+cp .env.example .env
+
+# Start the database service
+docker compose up
+
+# Migrate the database
+pnpm db:migrate
 ```
 
 ## Running Locally
@@ -27,6 +44,10 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Resources
+
+- [Bulletproof React](https://github.com/alan2207/bulletproof-react)
 
 ## Deploy on Vercel
 
