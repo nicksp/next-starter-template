@@ -9,7 +9,7 @@ import {
   DropdownMenu,
   DropdownTrigger,
 } from '@nextui-org/react'
-import { IconBrandGoogle } from '@tabler/icons-react'
+import { IconLogin2, IconLogout2 } from '@tabler/icons-react'
 import { signIn, signOut, useSession } from 'next-auth/react'
 
 export default function AuthButton({
@@ -27,7 +27,7 @@ export default function AuthButton({
     if (minimal) {
       return (
         <Button color="danger" variant="ghost" onPress={handleSignOut}>
-          <IconBrandGoogle />
+          <IconLogout2 />
           Sign out
         </Button>
       )
@@ -58,16 +58,8 @@ export default function AuthButton({
   }
 
   return (
-    <Button
-      color="danger"
-      variant="ghost"
-      onPress={() =>
-        signIn('google', {
-          callbackUrl: '/profile',
-        })
-      }
-    >
-      <IconBrandGoogle />
+    <Button color="danger" variant="ghost" onPress={() => signIn()}>
+      <IconLogin2 />
       Sign in
     </Button>
   )

@@ -8,10 +8,15 @@ expand(config())
 export const env = createEnv({
   server: {
     NODE_ENV: z.enum(['development', 'production']),
-    GOOGLE_CLIENT_ID: z.string(),
-    GOOGLE_CLIENT_SECRET: z.string(),
     NEXTAUTH_URL: z.string().url(),
     AUTH_SECRET: z.string(),
+    GOOGLE_CLIENT_ID: z.string(),
+    GOOGLE_CLIENT_SECRET: z.string(),
+    EMAIL_FROM: z.string(),
+    EMAIL_SERVER_HOST: z.string(),
+    EMAIL_SERVER_PORT: z.string(),
+    EMAIL_SERVER_USER: z.string(),
+    EMAIL_SERVER_PASSWORD: z.string(),
     DB_HOST: z.string(),
     DB_USER: z.string(),
     DB_PASSWORD: z.string(),
