@@ -35,16 +35,16 @@ export default async function GuestbookPage() {
                   src={entry.user.image ?? ''}
                 />
                 <div className="flex flex-col items-start justify-center gap-1">
-                  <h4 className="text-small font-semibold leading-none text-default-600">
+                  <h4 className="text-small text-default-600 leading-none font-semibold">
                     {entry.user.name}
                   </h4>
-                  <h5 className="text-small tracking-tight text-default-400">
+                  <h5 className="text-small text-default-400 tracking-tight">
                     {entry.user.email}
                   </h5>
                 </div>
               </div>
             </CardHeader>
-            <CardBody className="px-3 py-0 text-small text-default-400">
+            <CardBody className="text-small text-default-400 px-3 py-0">
               <p>{entry.message}</p>
             </CardBody>
             <CardFooter className="gap-3">

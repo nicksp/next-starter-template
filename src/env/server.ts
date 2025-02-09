@@ -1,7 +1,7 @@
 import { createEnv } from '@t3-oss/env-nextjs'
 import { config } from 'dotenv'
 import { expand } from 'dotenv-expand'
-import { type ZodError, z } from 'zod'
+import { z } from 'zod'
 
 expand(config())
 
@@ -28,13 +28,6 @@ export const env = createEnv({
       .refine((s) => s === 'true' || s === 'false')
       .transform((s) => s === 'true')
       .optional(),
-  },
-  onValidationError: (error: ZodError) => {
-    console.error(
-      '❌ Invalid environment variables:',
-      error.flatten().fieldErrors
-    )
-    process.exit(1)
   },
   emptyStringAsUndefined: true,
   // eslint-disable-next-line n/no-process-env

@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className="h-screen w-screen">
         <Providers>
           <AppNavbar />
-          <main className="flex-grow">
+          <main className="grow">
             <Suspense>{children}</Suspense>
           </main>
         </Providers>
