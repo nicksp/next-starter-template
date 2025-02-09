@@ -22,7 +22,7 @@
     "@auth/drizzle-adapter": "1.7.4",
     "@conform-to/react": "1.2.2",
     "@conform-to/zod": "1.2.2",
-    "@nextui-org/react": "2.6.11",
+    "@heroui/react": "2.6.14",
     "@t3-oss/env-nextjs": "0.12.0",
     "@tabler/icons-react": "3.30.0",
     "@tailwindcss/postcss": "4.0.5",

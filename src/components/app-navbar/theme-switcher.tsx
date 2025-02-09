@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
-import { Switch } from '@nextui-org/react'
+import { Switch } from '@heroui/react'
 import { IconMoon, IconSun } from '@tabler/icons-react'
 
 import useSystemTheme from '@/hooks/use-system-theme'

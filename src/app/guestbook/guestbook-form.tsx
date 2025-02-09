@@ -4,7 +4,7 @@ import { useActionState } from 'react'
 
 import { useForm } from '@conform-to/react'
 import { parseWithZod } from '@conform-to/zod'
-import { Button, Textarea } from '@nextui-org/react'
+import { Button, Textarea } from '@heroui/react'
 
 import { insertGuestbookEntrySchema } from '@/db/schema/guestbook-entries'
 

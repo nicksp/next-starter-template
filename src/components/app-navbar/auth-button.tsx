@@ -8,7 +8,7 @@ import {
   DropdownItem,
   DropdownMenu,
   DropdownTrigger,
-} from '@nextui-org/react'
+} from '@heroui/react'
 import { IconLogin2, IconLogout2 } from '@tabler/icons-react'
 import { signIn, signOut, useSession } from 'next-auth/react'
 

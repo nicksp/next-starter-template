@@ -1,10 +1,4 @@
-import {
-  Avatar,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-} from '@nextui-org/react'
+import { Avatar, Card, CardBody, CardFooter, CardHeader } from '@heroui/react'
 
 import db from '@/db'
 

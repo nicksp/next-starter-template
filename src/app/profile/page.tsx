@@ -1,4 +1,4 @@
-import { Card, CardBody, User } from '@nextui-org/react'
+import { Card, CardBody, User } from '@heroui/react'
 import { getServerSession } from 'next-auth'
 
 import options from '@/config/auth'

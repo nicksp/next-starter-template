@@ -11,7 +11,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   NavbarMenuToggle,
-} from '@nextui-org/react'
+} from '@heroui/react'
 import { useSession } from 'next-auth/react'
 
 import AuthButton from './auth-button'
